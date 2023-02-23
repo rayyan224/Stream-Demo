@@ -4,7 +4,7 @@ import { StreamsFilter } from "./StreamsFilter/StreamsFilter";
 import { io } from "socket.io-client";
 import ReactJson from "react-json-view";
 import lodash from "lodash";
-import { useNotification } from "@web3uikit/core";
+import { NotificationProvider, useNotification } from "@web3uikit/core";
 const url = "http://83.61.62.249:5080";
 
 export const SteamsDemo = () => {
@@ -57,6 +57,7 @@ export const SteamsDemo = () => {
     }
   };
   return (
+    <NotificationProvider>
     <DivStyled>
       <StreamsFilter onStreamsCreateClick={handleStreamsSetup} />
       <ReactJson
@@ -74,6 +75,8 @@ export const SteamsDemo = () => {
         }}
       />
     </DivStyled>
+    </NotificationProvider>
+
   );
 };
 
