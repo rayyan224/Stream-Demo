@@ -57,7 +57,6 @@ export const SteamsDemo = () => {
     }
   };
   return (
-    <NotificationProvider>
     <DivStyled>
       <StreamsFilter onStreamsCreateClick={handleStreamsSetup} />
       <ReactJson
@@ -75,8 +74,6 @@ export const SteamsDemo = () => {
         }}
       />
     </DivStyled>
-    </NotificationProvider>
-
   );
 };
 
